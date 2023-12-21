@@ -1,62 +1,130 @@
 @charset "utf-8";
-/* CSS Document */
 
-body{
-    margin: 0;
-    font-size: 50px;
+body {
+  margin: 0;
+  font-size: 50px;
 }
 
-        .header {
-            background-color: #f6e1ee;
-            height: 80px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
+.menu {
+  --menu-height: 40px;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+}
 
-        .nav {
-            overflow: hidden;
-            background-color: #646bb0;
-            position: fixed;
-            top: 80px; 
-            width: 0; /* Initially hide the nav */
-            height: 300px;
-            transform-origin: top;
-            transition: 0.5s; /* Add a smooth transition */
-        }
+.menu ul {
+  list-style: none;
+  padding: 16px;
+  margin: 0;
+}
 
-        .nav a {
-            color: black;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-            display: block;
-        }
+.menu li,
+.menu li a {
+  opacity: 0.8;
+  color: #ffffff;
+  cursor: pointer;
+  transition: 200ms;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: 700;
+}
 
-        .nav a:hover {
-            background-color: #ddd;
-            color: #b585ba;
-        }
+.menu li:hover {
+  opacity: 1;
+}
 
-        .nav a.icon {
-            background: black;
-            display: block;
-            position: absolute;
-            top: 0;
-            right: 20px; /* Adjust the position as needed */
-            
-        }
+.menu li a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
 
+.menu li {
+  padding-right: 36px;
+}
 
+.menu li:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #FFA500;
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
+.menu .link:before {
+  padding-right: 0;
+  display: none;
+}
 
+.menu > ul {
+  display: flex;
+  height: var(--menu-height);
+  align-items: center;
+  background-color: #000000;
+}
 
+.menu > ul li {
+  position: relative;
+  margin: 0 8px;
+}
+
+.menu > ul li ul {
+  visibility: hidden;
+  opacity: 0;
+  padding: 0;
+  min-width: 160px;
+  background-color: #333;
+  position: absolute;
+  top: calc(var(--menu-height) + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 200ms;
+  transition-delay: 200ms;
+}
+
+.menu > ul li ul li {
+  margin: 0;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 30px;
+  padding-right: 40px;
+}
+
+.menu > ul li ul li:before {
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid #FFA500;
+}
+
+.menu > ul li ul ul {
+  top: -2%;
+  left: 100%;
+  transform: translate(0);
+}
+
+.menu > ul li ul li:hover {
+  background-color: #000000;
+}
+
+.menu > ul li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0ms;
+}
 
 /* For mobile phones: */
 @media only screen and (max-width: 768px) {
-    .nav{
-        width: 100%;
-    }
+  /* Add mobile styles here */
 }
-/*No more phone*/
