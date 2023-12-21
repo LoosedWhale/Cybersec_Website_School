@@ -1,17 +1,30 @@
 @charset "utf-8";
 
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('SourceCodePro-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.temptxt{display: none}
+
+
+
 body {
   margin: 0;
   font-size: 50px;
+  font-family: 'Source Code Pro', monospace;
 }
 
+
+/*Thank you Sofia for this code idk what it does exactaly but I will figure it out*/
 .menu {
-  --menu-height: 40px;
   box-sizing: border-box;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
+  height: var(--menu-height, 40px); /* Fallback value */
 }
 
 .menu ul {
@@ -23,7 +36,7 @@ body {
 .menu li,
 .menu li a {
   opacity: 0.8;
-  color: #ffffff;
+  color: #646bb0;
   cursor: pointer;
   transition: 200ms;
   text-decoration: none;
@@ -52,7 +65,7 @@ body {
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid #FFA500;
+  border-top: 5px solid #e19ec6;
   position: absolute;
   right: 8px;
   top: 50%;
@@ -68,7 +81,7 @@ body {
   display: flex;
   height: var(--menu-height);
   align-items: center;
-  background-color: #000000;
+  background-color: #f6e1ee;
 }
 
 .menu > ul li {
@@ -81,7 +94,7 @@ body {
   opacity: 0;
   padding: 0;
   min-width: 160px;
-  background-color: #333;
+  background-color: #fff;
   position: absolute;
   top: calc(var(--menu-height) + 5px);
   left: 50%;
@@ -96,7 +109,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  height: 30px;
+  height: 60px;
   padding-right: 40px;
 }
 
@@ -105,7 +118,7 @@ body {
   height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-left: 5px solid #FFA500;
+  border-left: 5px solid #e19ec6;
 }
 
 .menu > ul li ul ul {
@@ -115,7 +128,7 @@ body {
 }
 
 .menu > ul li ul li:hover {
-  background-color: #000000;
+  background-color: #f8c5c8;
 }
 
 .menu > ul li:hover > ul {
@@ -123,8 +136,28 @@ body {
   visibility: visible;
   transition-delay: 0ms;
 }
+/*Thank you for the code above lol*/
+
+.homepagebg{
+	background-image: url("cybersec.png");
+	background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+	aspect-ratio: 16/9;
+}
+
+.footer{
+	background-image: url("Footer.png");
+	background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+	aspect-ratio: 1921/432;
+}
 
 /* For mobile phones: */
 @media only screen and (max-width: 768px) {
   /* Add mobile styles here */
+  body {font-size: 16px;}
+  .menu > ul li ul li {height: 20px;}
+	
 }
