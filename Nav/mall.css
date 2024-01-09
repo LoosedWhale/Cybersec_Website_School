@@ -6,7 +6,6 @@
   font-weight: normal;
   font-style: normal;
 }
-.temptxt{display: none}
 
 
 
@@ -16,6 +15,41 @@ body {
   font-family: 'Source Code Pro', monospace;
 }
 
+.itemsundernavbarspacer{height: 91px;}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+.scrollable {
+	margin-left: 20px;
+	margin-right: 20px;
+ 	overflow-x: auto;
+	font-size: 40px;
+}
 
 /*Thank you Sofia for this code idk what it does exactaly but I will figure it out*/
 .menu {
@@ -146,6 +180,25 @@ body {
 	aspect-ratio: 16/9;
 }
 
+
+.video{
+	padding: 10%;
+}
+.video iframe{
+	
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 16/9;
+}
+
+.sextips{
+	background-image: url("linus.png");
+	background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+	aspect-ratio: 16/9;
+}
+
 .footer{
 	background-image: url("Footer.png");
 	background-size:contain;
@@ -156,8 +209,11 @@ body {
 
 /* For mobile phones: */
 @media only screen and (max-width: 768px) {
-  /* Add mobile styles here */
-  body {font-size: 16px;}
-  .menu > ul li ul li {height: 20px;}
-	
+  	/* Add mobile styles here */
+	body {font-size: 16px;}
+	.scrollable{font-size: 15px;}
+	.menu > ul li ul li {height: 20px;}
+	.itemsundernavbarspacer{height: 51px;}
+	.video{padding: 0px;}
+	.footer{background-image: url("Footermobile.png"); aspect-ratio: 773/904;}
 }

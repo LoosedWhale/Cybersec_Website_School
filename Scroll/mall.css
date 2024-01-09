@@ -15,15 +15,12 @@ body {
     background-color: black;
     margin: 0px;
 }
-h1{	
+h1, h3 {	
 	margin-left: 50px;
 	margin-right: 50px;
 }
 
-h3 {
-	margin-left: 50px;
-	margin-right: 50px;
-}
+
 /*Yea no more of that shit*/
 
 /*Grid items*/
