@@ -1,6 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 
+/*Font body and all that shit*/
 @font-face {
   font-family: 'Source Code Pro';
   src: url('SourceCodePro-Medium.ttf') format('truetype');
@@ -14,16 +15,25 @@ body {
     background-color: black;
     margin: 0px;
 }
+h1{	
+	margin-left: 50px;
+	margin-right: 50px;
+}
 
+h3 {
+	margin-left: 50px;
+	margin-right: 50px;
+}
+/*Yea no more of that shit*/
 
-
-
+/*Grid items*/
 .grid-wrap{
     display: grid;
     grid-template-columns: auto auto auto auto auto auto;
     background-color: black;
 }
 
+/*Header section*/
 .header{
     grid-column: 1/7;
     background-image: url("anonymous-internet.png");
@@ -37,14 +47,15 @@ body {
     width: 200px;
     background-repeat: no-repeat;
     background-size: 200px 200px;
-    
 }
 
 .homebtn:hover{
     transform: scale(1.2);
 
 }
+/*Header section ends*/
 
+/*Cyber Basics section*/
 .basicstxt{
     grid-column: 1/3;
     width: 80%;
@@ -52,10 +63,8 @@ body {
     height: 80%;
     border-radius: 50px;
     background-color: #174c59;
-    color: white;
-    
+    color: white;   
 }
-
 
 .basicsimg{
     grid-column: 3/7;
@@ -67,9 +76,9 @@ body {
     height: 1080px;
     
 }
+/*Cyber Basics section ends*/
 
-
-
+/*Cyber Threats section*/
 .threatsimg{
     display: grid;
     grid-column: 1/7;
@@ -88,8 +97,7 @@ body {
     height: 90%;
     border-radius: 50px;
     background-color:black;
-    background-color: rgba(0,0,0,0.5)
-    
+    background-color: rgba(0,0,0,0.5);
 }
 
 .threatstxttypes{
@@ -101,7 +109,9 @@ body {
     background-color:black;
     background-color: rgba(0,0,0,0.5)
 }
+/*Cyber Threats section ends*/
 
+/*Security Tips section*/
 .tipimg{
     display: grid;
     grid-column: 1/7;
@@ -114,7 +124,6 @@ body {
 }
 
 .tipstxt{
-    
     grid-column: 1/4;
     width: 90%;
     margin: auto;
@@ -124,17 +133,59 @@ body {
     color:white;
 }
 
+.collapsible {
+  background-color: #174c59;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+}
+
+.active, .collapsible:hover {
+ 	background-color: #113A45;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #174c59;
+}
+
 .tipsmoretxt{
     grid-column: 4/7;
+	color: transparent;
     width: 90%;
     margin: auto;
     margin-top: 60%;
     height: 41.5%;
     border-radius: 50px;
-    background-color:#174c59;
+    background-color:none;
+	
 }
+/*Security Tips section ends*/
 
+/*Resources section*/
+.resourcesbackground{
+	display: grid;
+    grid-column: 1/7;
+	background-image: url("resourcesbackgroundfull.png");
+	background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+	aspect-ratio: 1920/1504;
+}
+.resourcesbackground h1{
+	font-size: 120px;
+	text-align: center;
+	color: #A11604;
+}
+/*Resources section ends*/
 
+/*Footer section*/
 .footer{
 	grid-column: 1/7;
 	background-image: url("Footer.png");
@@ -143,24 +194,40 @@ body {
     background-position: center;
 	aspect-ratio: 1923/541;
 }
+/*Footer section eds*/
 
+/*Grid items ends*/
+
+/*Media qauiry section*/
+/* For mid sized screens*/
+@media only screen and (max-width: 1200px){
+    .header{height:240px; background-size:cover;}
+	.homebtn{height: 150px; width: 150px; background-size: 150px 150px;}
+	.basicsimg{aspect-ratio: 1/3}
+    .threatsimg{aspect-ratio: 0; height: 1000px; background-color: #144C59; background-image: none;}
+	.tipimg{background-image: none;}
+	.tipstxt{border-radius: 20px;}
+	.tipsmoretxt{display: none;}
+	
+	.resourcesbackground h1{font-size: 50px;}
+}
 
 /* For mobile phones: */
 @media only screen and (max-width: 768px) {
-    .header{height:240px; background-size: contain;}
+	.homebtn{height: 100px; width: 100px; background-size: 100px 100px;}
     .basicstxt{grid-column: 1/7;border-radius: 15px;height:98%; width: 95%;}
     .basicsimg{display: none;}
-    .threatsimg{background-color: #144C59; background-image: none; }
-    .threatstxttypes{width: 95%;margin: auto;height: 90%;border-radius: 20px;}
+    .threatsimg{background-color: #144C59; }
+    .threatstxttypes{width: 95%;margin: auto;height: 90%;border-radius: 20px; display: none;}
     .threatstxt{width: 95%;margin: auto;height: 90%;border-radius: 20px;}
+	.resourcesbackground{background-image: url("resourcesbackgroundmobile.png"); aspect-ratio: 769/2801;}
+	.resourcesbackground h1{font-size: 25px;}
+	.footer{background-image: url("Footermobile.png"); aspect-ratio: 773/904;}
    
 }
 
 
-@media only screen and (max-width: 1200px){
-    .header{height:240px; background-size:cover;}
-    .threatsimg{aspect-ratio: 0; height: 1000px;background-color: #144C59; background-image: none; }
-}
+/* Anti responsive page cheat cheat */
 
 /*@media only screen and (max-width:1910px){
     body{background-color: white;}
@@ -169,3 +236,5 @@ body {
     
     
 }
+
+/* Media quaity section ends*/

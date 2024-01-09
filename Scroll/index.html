@@ -7,10 +7,13 @@
 </head>
 
 <body>
+	<!--Anti resposive page feature-->
     <div class="temptxt">Använd en skärm som är större eller lika med 1920px</div>
     
     <div class="grid-wrap">
+		<!--Header section-->
         <div class="header"> <a href="index.html"> <div class="homebtn"></div></a></div>
+		<!--Cyber Basics section-->
         <div class="basicstxt">
             <h1>
             <br> 
@@ -44,6 +47,7 @@
             </h3>
         </div>
         <div class="basicsimg"></div>
+		<!--Cyber Threats section-->
         <div class="threatsimg"> 
             <div class="threatstxt">
                 <h1>
@@ -90,16 +94,87 @@
                 </h3>
             </div>
         </div>
+		<!--Security Tips section-->
         <div class="tipimg">
             <div class="tipstxt">
-            Temp text
+            	<h1>
+				<br>
+				Security Tips
+				</h1>
+				<br><br>
+					<button type="button" class="collapsible">Strong Passwords:</button>
+					<div class="content">
+					  <p>Create complex passwords using a mix of letters, numbers, and symbols. Avoid using easily guessable information.</p>
+					</div>
+					<button type="button" class="collapsible">Multi-Factor Authentication (MFA):</button>
+					<div class="content">
+					  <p>Multi-Factor Authentication aslo know as MFA should be enableld whenever possible for an extra layer of security.</p>
+					</div>
+					<button type="button" class="collapsible">Stay Informed:</button>
+					<div class="content">
+					  <p>Educate yourself about common online scams and phishing techniques to recognize and avoid them. By doing this you will have a greater understanding of cyber security.</p>
+					</div>
+					<button type="button" class="collapsible">Secure Wi-Fi:</button>
+					<div class="content">
+					  <p>Set a strong password for your Wi-Fi network and use WPA3 also known as Wi-Fi Protected Access 3 as it provides encryption for added protection. </p>
+					</div>
+					<button type="button" class="collapsible">Regular Updates:</button>
+					<div class="content">
+					  <p>Keep your devices, apps, and antivirus software up to date to fix vulnerabilities. There is a reason why companies realise updates, it's not just to annoy you it also has it's benifits.</p>
+					</div>
+					<button type="button" class="collapsible">Backup Your Data:</button>
+					<div class="content">
+					  <p>Regularly back up important data to an external drive or secure cloud service. If your data is very important to you it should be saved in atleast 3 different places.</p>
+					</div>
+				<br><br>
+				<br><br>
+				<br><br>
             </div>
             <div class="tipsmoretxt">
-            Temp text
+				<br><br>
+				<h3>
+				Social Media Awareness:
+				Be cautious about the information you share on social media to minimize the risk of social engineering attacks.
+				<br><br>
+				Secure Your Devices:
+				Use passcodes or biometric authentication on your mobile devices and install reputable security apps.
+				<br><br>
+				Email Vigilance:
+				Verify the legitimacy of emails, avoid clicking on suspicious links, and refrain from sharing personal information unless certain of the source. 
+				</h3>
             </div>
         
         </div>
+		<!--Resources section-->
+		<div class="resourcesbackground">
+			<h1>
+			Resources
+			</h1>
+		</div>
+		<!--Footer section-->
+		<div class="footer"></div>
     </div>
-	<div class="footer"></div>
+	
+<!--Code I totaly did not steal from W3schools lol-->
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+<!--https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible-->
+	
 </body>
 </html>
+
+
