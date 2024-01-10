@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+/*Font and body*/
 @font-face {
   font-family: 'Source Code Pro';
   src: url('SourceCodePro-Medium.ttf') format('truetype');
@@ -8,48 +8,17 @@
 }
 
 
-
 body {
   margin: 0;
   font-size: 50px;
   font-family: 'Source Code Pro', monospace;
+  padding: 0;
 }
+/*Font and body end*/
 
+
+/*Navbar*/
 .itemsundernavbarspacer{height: 91px;}
-
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th, td {
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {background-color: #f2f2f2;}
-
-table {
-	border-collapse: collapse;
-	width: 100%;
-}
-
-th, td {
-	text-align: left;
-	padding: 8px;
-}
-
-tr:nth-child(even) {
-	background-color: #f2f2f2;
-}
-
-.scrollable {
-	margin-left: 20px;
-	margin-right: 20px;
- 	overflow-x: auto;
-	font-size: 40px;
-}
 
 /*Thank you Sofia for this code idk what it does exactaly but I will figure it out*/
 .menu {
@@ -58,7 +27,7 @@ tr:nth-child(even) {
   top: 0;
   left: 0;
   width: 100vw;
-  height: var(--menu-height, 40px); /* Fallback value */
+  height: var(--menu-height, 40px);
 }
 
 .menu ul {
@@ -171,7 +140,9 @@ tr:nth-child(even) {
   transition-delay: 0ms;
 }
 /*Thank you for the code above lol*/
+/*NavBar end*/
 
+/*Background image for the home page*/
 .homepagebg{
 	background-image: url("cybersec.png");
 	background-size:contain;
@@ -180,7 +151,34 @@ tr:nth-child(even) {
 	aspect-ratio: 16/9;
 }
 
+/*Information table that can be reused and modifed with ease*/
+/*https://www.w3schools.com/css/tryit.asp?filename=trycss_table_responsive*/
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
 
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+.scrollable {
+  margin-left: 20px;
+  margin-right: 20px;
+  overflow-x: auto;
+  font-size: 40px;
+}
+
+/*Table End*/
+
+
+/*Video for embeding youtube videos*/
 .video{
 	padding: 10%;
 }
@@ -190,15 +188,53 @@ tr:nth-child(even) {
 	height: 100%;
 	aspect-ratio: 16/9;
 }
+/*Video no more*/
 
+
+/*Meme for security tips*/
 .sextips{
 	background-image: url("linus.png");
 	background-size:contain;
     background-repeat: no-repeat;
     background-position: center;
 	aspect-ratio: 16/9;
+	animation: BounceAni 2s ease 2s infinite none;
+	clip-path: circle(26% at 54% 51%);
 }
 
+@keyframes BounceAni {
+  0% {
+	transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+	transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+	transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+	transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+	transform: scale3d(0.95, 1.05, 1);
+  }
+
+  75% {
+	transform: scale3d(1.05, 0.95, 1);
+  }
+
+  100% {
+	transform: scale3d(1, 1, 1);
+  }
+}
+
+/*End of meme tomfolery*/
+
+/*Footer*/
 .footer{
 	background-image: url("Footer.png");
 	background-size:contain;
@@ -206,10 +242,10 @@ tr:nth-child(even) {
     background-position: center;
 	aspect-ratio: 1921/432;
 }
+/*No more feet*/
 
-/* For mobile phones: */
+/* Media qauiry For mobile phones: */
 @media only screen and (max-width: 768px) {
-  	/* Add mobile styles here */
 	body {font-size: 16px;}
 	.scrollable{font-size: 15px;}
 	.menu > ul li ul li {height: 20px;}
